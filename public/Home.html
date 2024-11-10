@@ -20,9 +20,10 @@
         body {
             background-color: #000000;
             color: white;
-            min-height: 100vh;
-            display: flex;
+            min-height: 120vh;
             align-items: center;
+            /* display: flex; */
+            border: 2px solid red;
             padding: 2rem;
             overflow-x: hidden;
             /* overflow-y:; */
@@ -32,8 +33,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height:max-content;
             overflow: hidden;
         }
 
@@ -41,7 +42,7 @@
             width: 100%;
             height: 100%;
         }
-       
+
         .container {
             max-width: 1400px;
             /* border: 2px solid red; */
@@ -60,6 +61,7 @@
             flex: 1.5;
             /* border: 2px solid black; */
             z-index: 1;
+            margin-top: 5.5rem;
         }
 
         .greeting-wrapper {
@@ -114,16 +116,18 @@
 
         .profile-section {
             /* border: 2px solid red; */
-            width:40%;
+            width: 40%;
             height: 40%;
             /* max */
+            margin-top: 4rem;
             opacity: 0;
             animation: fadeIn 1s ease-in forwards;
             animation-delay: 1s;
             z-index: -1;
-    
+
         }
-        .profile-section img{
+
+        .profile-section img {
             width: 500px;
         }
 
@@ -138,7 +142,7 @@
             width: 300px;
             height: 300px;
             background: #208eed;
-            top: -350px;
+            top: -270px;
             left: -150px;
         }
 
@@ -201,27 +205,25 @@
             opacity: 0.3;
             transition: 0s;
         }
-        /* .second-container{
-            width: 100%;
-            display: inline-block;
-        } */
 
-         .social-container {
-            margin-top: 2rem;
-            border: 2px solid red;
-            display: block;
-            gap: 1.5rem;
-            width: 100px;
+        .social-container {
+                display: flex;
+                gap: 5.5rem;
         }
-        /* .second-container{
-            display: block;
-            border: 2px solid red;
-        } */
+
+        .second-container {
+            width: 100%;
+            /* background: #000000; */
+            margin-top: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .social-link {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
+            width: 70px;
+            height: 40px;
+            border-radius: 80%;
             background-color: #2a2a2a;
             display: flex;
             align-items: center;
@@ -278,9 +280,9 @@
 
         .twitter:hover::before {
             background: linear-gradient(45deg, #1DA1F2, #0d8ecf);
-        } */
+        }
 
-        @media (max-width: 768px) {
+        */ @media (max-width: 768px) {
             .social-container {
                 justify-content: center;
             }
@@ -367,58 +369,59 @@
         }
     </style>
 </head>
+
 <body>
     <div class="background-effect-container">
         <canvas id="animation_bg" width="1400" height="1430"></canvas>
-    </div> 
-<div class="container">
-    <div class="circle-1 decorative-circle"></div>
-    <div class="circle-2 decorative-circle"></div>
+    </div>
+    <div class="container">
+        <div class="circle-1 decorative-circle"></div>
+        <div class="circle-2 decorative-circle"></div>
 
-    <div class="content">
-        <div class="greeting-wrapper">
-            <h1 class="greeting">Hey I am <span class="highlight typing-effect">Tanmay Joshi</span></h1>
+        <div class="content">
+            <div class="greeting-wrapper">
+                <h1 class="greeting">Hey I am <span class="highlight typing-effect">Tanmay Joshi</span></h1>
+            </div>
+            <h2 class="role">A Passionate <span>Web Developer</span></h2>
+            <button class="start-free-btn">Email ME</button>
         </div>
-        <h2 class="role">A Passionate <span>Web Developer</span></h2>
-        <button class="start-free-btn">Start Free</button>
+
+        <div class="profile-section">
+            <img src="./Images/undraw_swing_jn5d.svg" alt="image">
+        </div>
     </div>
 
-    <div class="profile-section">
-        <img src="./Images/undraw_swing_jn5d.svg" alt="image">
+    <div class="second-container">
+
+
+        <div class="social-container">
+            <a href="#" class="social-link github" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+            </a>
+            <a href="#" class="social-link instagram" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.165s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.165-6.162-6.165z" />
+                </svg>
+            </a>
+            <a href="#" class="social-link twitter" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M23.643 4.937c-.885.392-1.833.656-2.828.776 1.016-.608 1.798-1.572 2.165-2.723-.951.564-2.003.973-3.12 1.19-.894-.951-2.172-1.541-3.588-1.541-2.71 0-4.91 2.201-4.91 4.91 0 .385.043.76.127 1.116-4.088-.205-7.71-2.161-10.14-5.144-.424.727-.666 1.568-.666 2.469 0 1.7.865 3.199 2.178 4.078-0.804-.026-1.56-.247-2.226-.616-.055 2.284 1.61 4.364 3.969 4.828-0.428.116-.876.177-1.333.177-.327 0-.648-.031-.96-.089.648 2.022 2.538 3.5 4.771 3.536-1.75 1.367-3.947 2.183-6.351 2.183-0.413 0-0.819-.024-1.22-.071 2.265 1.44 4.963 2.283 7.842 2.283 9.418 0 14.578-7.8 14.578-14.578 0-.22 0-.44-.016-.66.999-.725 1.875-1.625 2.556-2.652z" />
+                </svg>
+            </a>
+        </div>
     </div>
-</div>
-
-
-  <div class="social-container">
-    <a href="#" class="social-link github" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-        </svg>
-    </a>
-    <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-        </svg>
-    </a>
-    <a href="#" class="social-link instagram" aria-label="Instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.165s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.165-6.162-6.165z" />
-        </svg>
-    </a>
-    <a href="#" class="social-link twitter" aria-label="Twitter">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path
-                d="M23.643 4.937c-.885.392-1.833.656-2.828.776 1.016-.608 1.798-1.572 2.165-2.723-.951.564-2.003.973-3.12 1.19-.894-.951-2.172-1.541-3.588-1.541-2.71 0-4.91 2.201-4.91 4.91 0 .385.043.76.127 1.116-4.088-.205-7.71-2.161-10.14-5.144-.424.727-.666 1.568-.666 2.469 0 1.7.865 3.199 2.178 4.078-0.804-.026-1.56-.247-2.226-.616-.055 2.284 1.61 4.364 3.969 4.828-0.428.116-.876.177-1.333.177-.327 0-.648-.031-.96-.089.648 2.022 2.538 3.5 4.771 3.536-1.75 1.367-3.947 2.183-6.351 2.183-0.413 0-0.819-.024-1.22-.071 2.265 1.44 4.963 2.283 7.842 2.283 9.418 0 14.578-7.8 14.578-14.578 0-.22 0-.44-.016-.66.999-.725 1.875-1.625 2.556-2.652z" />
-        </svg>
-    </a>
-</div>
-<div class="second-container">
-
-</div>
- </body>
+</body>
 
 
 <script src="./JS/Home.js"></script>
