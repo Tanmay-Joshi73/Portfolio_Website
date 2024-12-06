@@ -1,7 +1,6 @@
 
 const expreess=require('express')
 const nodemailer=require("nodemailer")
-
 exports.SendEmail=async(Username,toEmail,Message)=>{
     try{
       const transporter = nodemailer.createTransport({
