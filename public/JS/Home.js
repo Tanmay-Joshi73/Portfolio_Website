@@ -188,10 +188,4 @@ function createStars() {
     
     requestAnimationFrame(animate);
   }
-  
-  // Initialize
-  document.addEventListener('DOMContentLoaded', () => {
-    createStars();
-    createGlowingOrbs();
-    setInterval(createShootingStar, 2000);
-  });
+ 

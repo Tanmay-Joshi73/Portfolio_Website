@@ -14,13 +14,13 @@ html, body {
     box-sizing: border-box;
 }
 body {
-    /* background-color: #000000; */
+    background-color: #000000;
     color: white;
     min-height: 205vh;
     height: 100%;
     align-items: center;
     /* display: flex; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 2rem;
     overflow-x: hidden;
     /* overflow-y:; */
@@ -228,7 +228,7 @@ body {
 
 .second-container {
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-top: 10rem;
     display: flex;
     justify-content: center;
@@ -448,7 +448,7 @@ body {
     width: 100%;
     height: 20rem;
     z-index: 1;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 
@@ -606,7 +606,7 @@ body {
     width: 100%;
     height: 50rem;
     z-index: 1;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     }
     
     .info-Container-2 {
@@ -822,7 +822,7 @@ body {
 
 .card-container {
     display: flex;
-    background-color: whitesmoke ;/* Custom background color */
+    /* background-color: whitesmoke ;Custom background color */
     color: white;
     border-radius: 10px;
     padding: 40px; /* Increased padding */
@@ -884,6 +884,9 @@ body {
     object-fit: cover; /* Ensures the video fills the entire div */
     border-radius: 10px;
 }
+
+/* Loader animtaion */
+
 /* Responsive */
 @media (max-width: 768px) {
     .card-container {
@@ -932,6 +935,123 @@ body {
         padding: 10px 20px;
     }
 }
+
+/* Contact Section Container */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 1;
+    margin-top: 5rem;
+  }
+  
+  /* Form Styles */
+  .contact-form {
+    background-color: #252934; /* Dark slate with a hint of blue */
+    padding: 2.8rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.7);
+    max-width: 34.5rem;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f9fafb; /* Light color for text */
+    z-index: 1;
+  }
+  
+  .contact-form h2 svg {
+    margin-right: 0.75rem;
+    color: #ffd700; /* Vibrant golden for icon */
+    height: 3rem;
+    width: 3rem;
+    z-index: 1;
+  }
+  
+  /* Input and Textarea Styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem 0.875rem 3rem;
+    background-color: #1e2029; /* Slightly lighter than the form background */
+    border: 2px solid #394053; /* Contrasting border */
+    border-radius: 0.75rem;
+    color: #e2e8f0; /* Light color for text */
+    font-size: 1rem;
+    transition: all 0.3s;
+    z-index: 1;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    padding-top: 1.25rem;
+    z-index: 1;
+  }
+  
+  .form-group input:hover,
+  .form-group textarea:hover {
+    background-color: #2c313c; /* Brighter background on hover */
+    border-color: #ffd700; /* Golden border for focus */
+  }
+  
+  .form-group svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0; /* Neutral color for icons */
+    height: 1.25rem;
+    width: 1.25rem;
+    z-index: 1;
+  }
+  
+  .form-group textarea + svg {
+    top: 1.25rem;
+    z-index: 1;
+  }
+  
+  /* Submit Button Styles */
+  .submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(90deg, #4299e1, #0ea5e9); /* Gradient for modern look */
+    color: #f9fafb;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.875rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 2s;
+    gap: 0.5rem;
+  }
+  
+  .submit-button svg {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8); /* Darker gradient on hover */
+  }
+  
         /*Forth Container  */
         /* .fourth-container {
   position: relative;
