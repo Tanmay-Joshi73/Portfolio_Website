@@ -11,14 +11,12 @@ exports.FetchInfo=async(req ,res)=>{
     
 const{Username,Email,Message}= req.body.data;
 const user=await UserTour.findOne({email:Email})
-// if(!validator.validate(Email)){
-    
-//     // res.status(404).json({Status:"Success",Message:"Please Check Your Email"})
-//     return;
-// }
-if(!EmailVerifier(Email)){
-    return ;
+
+//For Email verification
+if (!await EmailVerifier(Email)) {
+    return res.status(400).json({ message: "Email is not correct. Please provide a valid email." });
 }
+
 await SendEmail(Username,Email,Message)
 if(user){
     user.message=Message;
