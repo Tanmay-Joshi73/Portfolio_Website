@@ -114,20 +114,19 @@ body {
 }
 
 .profile-section {
-    /* border: 2px solid red; */
     width: 40%;
     height: 40%;
-    /* max */
     margin-top: 4rem;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 1s;
     z-index: -1;
-
 }
 
 .profile-section img {
     width: 500px;
+    max-width: 100%;
+    height: auto;
 }
 
 .decorative-circle {
@@ -1191,6 +1190,518 @@ body {
 } */
 
         /* Responsive */
+  /* Media Quaries for the Profile-Seaction */
+  @media screen and (max-width: 1200px) {
+    .profile-section {
+        width: 50%;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .profile-section {
+        width: 60%;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-section {
+        width: 80%;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile-section {
+        width: 90%;
+        margin-top: 1rem;
+    }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+    /* Media queries for the Social Links and Second Container */
+    /* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .social-container {
+        gap: 3rem; /* Reduce gap between social links */
+        margin-top: 1.5rem; /* Adjust top margin */
+    }
+
+    .social-title {
+        font-size: 1.5rem; /* Slightly smaller font size */
+    }
+
+    .social-link {
+        width: 60px; /* Slightly smaller size */
+        height: 35px;
+    }
+
+    .social-link svg {
+        width: 18px; /* Adjust icon size */
+        height: 18px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .second-container {
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 5rem; /* Adjust top margin */
+    }
+
+    .social-container {
+        flex-wrap: wrap; /* Allow wrapping for links */
+        justify-content: center; /* Center-align links */
+        gap: 2rem; /* Smaller gap */
+    }
+
+    .social-title {
+        font-size: 1.2rem; /* Smaller font size */
+        margin-bottom: 0.5rem;
+    }
+
+    .social-link {
+        width: 50px; /* Smaller size */
+        height: 30px;
+    }
+
+    .social-link svg {
+        width: 16px; /* Adjust icon size */
+        height: 16px;
+    }
+}
+
+/* For very small screens (e.g., <480px) */
+@media (max-width: 480px) {
+    .social-container {
+        gap: 1.5rem; /* Even smaller gap */
+    }
+
+    .social-link {
+        width: 40px; /* Smaller size */
+        height: 25px;
+    }
+
+    .social-link svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Code for the third container */
+/* Media Queries for Responsive Timeline */
+
+/* For tablets and smaller desktops */
+@media screen and (max-width: 1024px) {
+    .Third-Container {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .info-Container span:nth-child(1) {
+        font-size: 1.1rem;
+    }
+
+    .info-Container span:nth-child(2) {
+        font-size: 3rem;
+    }
+
+    .timeline::after {
+        left: 40px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 10px 20px 10px 80px;
+    }
+
+    /* Left side items */
+    .left {
+        left: 0;
+    }
+    .left::after {
+        left: 30px;
+    }
+    .left .timeline-logo {
+        left: 0;
+        right: auto;
+    }
+
+    /* Right side items */
+    .right {
+        left: 0;
+    }
+    .right::after {
+        left: 30px;
+    }
+    .right .timeline-logo {
+        left: 0;
+        right: auto;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    .Third-Container {
+        padding: 10px;
+    }
+
+    .info-Container span:nth-child(1) {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-Container span:nth-child(2) {
+        font-size: 2.5rem;
+    }
+
+    .timeline-item {
+        padding: 10px 10px 10px 70px;
+    }
+
+    .timeline::after {
+        left: 30px;
+    }
+
+    .timeline-item::after {
+        width: 40px;
+        height: 40px;
+        top: 25px;
+    }
+
+    .timeline-logo {
+        width: 30px;
+        height: 30px;
+        top: 30px;
+    }
+
+    .timeline_content {
+        padding: 15px 20px;
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .points li {
+        font-size: 0.8rem;
+    }
+}
+
+/* For very small mobile devices */
+@media screen and (max-width: 480px) {
+    .info-Container span:nth-child(1) {
+        font-size: 0.9rem;
+    }
+
+    .info-Container span:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        padding: 10px 10px 10px 60px;
+    }
+
+    .timeline-item::after {
+        width: 35px;
+        height: 35px;
+        top: 20px;
+    }
+
+    .timeline-logo {
+        width: 25px;
+        height: 25px;
+        top: 25px;
+    }
+
+    .timeline_content {
+        padding: 10px 15px;
+    }
+
+    .points li {
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+}   
+    
+    /* Code for the skill component */
+    /* Media Queries for Skills Component */
+
+/* For tablets and smaller desktops */
+@media screen and (max-width: 1024px) {
+    .Skill-Compotenant {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .info-Container-2 {
+        margin-top: 5rem;
+        margin-left: 0;
+    }
+
+    .info-Container-2 span {
+        font-size: 3rem;
+    }
+
+    #myChart {
+        height: 350px;
+        margin-top: 1.5rem;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    .Skill-Compotenant {
+        padding: 10px;
+        height: auto;
+    }
+
+    .info-Container-2 {
+        margin-top: 3rem;
+    }
+
+    .info-Container-2 span {
+        font-size: 2.5rem;
+    }
+
+    #myChart {
+        height: 300px;
+        margin-top: 1rem;
+    }
+}
+
+/* For very small mobile devices */
+@media screen and (max-width: 480px) {
+    .Skill-Compotenant {
+        padding: 5px;
+    }
+
+    .info-Container-2 {
+        margin-top: 2rem;
+    }
+
+    .info-Container-2 span {
+        font-size: 2rem;
+    }
+
+    #myChart {
+        height: 250px;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .Skill-Compotenant {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .info-Container-2 {
+        margin-top: 3rem;
+    }
+
+    #myChart {
+        height: 300px;
+    }
+}
+
+/* Media Queries for the contact section */
+/* Responsive Media Queries for Contact Section */
+
+/* Mobile Devices (up to 576px) */
+@media screen and (max-width: 576px) {
+    .contact-section {
+      min-height: auto;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .contact-form {
+      width: 100%;
+      max-width: 100%;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      margin: 0;
+    }
+    
+    .contact-form h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-form h2 svg {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .form-group svg {
+      left: 0.75rem;
+      height: 1.1rem;
+      width: 1.1rem;
+    }
+    
+    .form-group textarea + svg {
+      top: 1rem;
+    }
+    
+    .submit-button {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+    
+    .submit-button svg {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+  
+  /* Tablets (577px to 768px) */
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    .contact-section {
+      min-height: auto;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .contact-form {
+      width: 90%;
+      max-width: 500px;
+      padding: 2rem;
+    }
+    
+    .contact-form h2 {
+      font-size: 2rem;
+      margin-bottom: 1.75rem;
+    }
+    
+    .contact-form h2 svg {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-right: 0.75rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      padding: 0.85rem 1.1rem 0.85rem 3rem;
+      font-size: 0.95rem;
+    }
+    
+    .form-group svg {
+      left: 1rem;
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+    
+    .submit-button {
+      padding: 0.85rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Small Desktops (769px to 992px) */
+  @media screen and (min-width: 769px) and (max-width: 992px) {
+    .contact-section {
+      min-height: 90vh;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .contact-form {
+      width: 80%;
+      max-width: 600px;
+      padding: 2.5rem;
+    }
+    
+    .contact-form h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      padding: 0.95rem 1.2rem 0.95rem 3.5rem;
+    }
+    
+    .form-group svg {
+      left: 1.25rem;
+    }
+  }
+  
+  /* Large Desktops (993px to 1200px) */
+  @media screen and (min-width: 993px) and (max-width: 1200px) {
+    .contact-section {
+      min-height: 100vh;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    
+    .contact-form {
+      width: 70%;
+      max-width: 700px;
+    }
+  }
+  
+  /* Extra Large Desktops (1201px and above) */
+  @media screen and (min-width: 1201px) {
+    .contact-section {
+      min-height: 100vh;
+      padding: 2rem;
+      margin-top: 5rem;
+    }
+    
+    .contact-form {
+      width: 100%;
+      max-width: 34.5rem;
+    }
+  }
+  
+  /* Accessibility Considerations */
+  @media (prefers-reduced-motion: reduce) {
+    .form-group input,
+    .form-group textarea,
+    .submit-button {
+      transition: none;
+    }
+  }
+
         @media screen and (max-width: 600px) {
             .timeline::after {
                 left: 31px;
